@@ -1,0 +1,31 @@
+\subsection{Reinforcement Learning}
+\subsubsection{Definitions}
+Agent
+Environment
+State
+Action
+Reward
+
+\subsubsection{Markov Decision Processes}
+
+\subsubsection{The Bellman Equation}
+Equation that represents the value of being in a particular state,
+based on the reward given for being in that state and the value of the
+best possible adjacent state that can be reached by taking one action,
+usually multiplied by a discount factor. This results in a recursive
+equation, as the value of the state depends on the value of its
+surrounding states. Typically, one can start from the goal state and
+propagate the state values ``backwards''. .
+
+\subsubsection{Q Learning}
+Replace the state value function in the Bellman equation with the Q
+function. This can be interpreted as ``action quality''.
+
+\subsubsection{Q learning with neural networks}
+Instead of using a table to store the policy, the policy is ``stored''
+in a neural network. This has consequences for stability.
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "../main"
+%%% End:
