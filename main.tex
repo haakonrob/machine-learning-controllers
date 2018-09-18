@@ -6,9 +6,36 @@
 \input{abstract}
 
 \section{Literature Review}
-\input{literature-review/reinforcement-learning}
+\input{literature-review/reinforcement-learning/reinforcement-learning}
 
 \section{Problem Formulation}
+
+In a navigation problem, one generally has a destination that you wish
+to get your system to. If the environement is deterministic, using
+some kind of path planning method like A* works well, as long as the
+``obstacles'' are known. When the environement is dynamic and unknown,
+this is not as easy. The ``global'' path may still be there, but there
+might be many small local obstacles that need to be avoided. A local
+avoidance system is therefore needed.
+
+Potential fields might lead to oscillatory behaviour.
+
+Dynamic window assume no sideways velocity, which is difficult in the
+context of ocean currents. Also computationally heavy, but works well
+with COLREGS.
+
+\section{Questions}
+\subsection{What is a Serret Frenet Frame?}
+Signes master
+
+\subsection{What is set-based control?}
+Signes PhD says:
+
+
+Signes
+\subsection{how can you show that set-based control laws will always be followed?}
+
+
 
 
 The project has the following steps:
@@ -18,13 +45,20 @@ The project has the following steps:
   used in tandem with control problems.
 \item Set up a simulation environment for the surface vessel,
   incorporating difference levels of disturbances.
-\item Set up a baseline using the established control algortihms
-\item Apply machine learning (behavioural cloning or reinforcement
-  learning) and compare them to the baseline
-\item Analyse the performance of the machine learning controlelrs,
+\item Set up a baseline using the established control algorithms
+\item Apply reinforcement learning to the system and figure out how to
+  train the system effectively.
+\item Analyse the performance of the machine learning controllers,
   compare the computation time (the expensiveness) between the two
-  algrothms, and explore the stability consequences of using machine
-  learning techniqes in control.  machine learning
-\end{enumerate]
+  algorithms, and explore the stability consequences of using machine
+  learning techniques in control.  machine learning
+\end{enumerate}
+
+
 
 \end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:
