@@ -1,59 +1,114 @@
-\documentclass{article}
+\documentclass[titlepage]{elsarticle}
 \usepackage[utf8]{inputenc}
-\begin{document}
+\usepackage{natbib}
 
-\section{Abstract}
-\input{abstract}
+\title{Machine Learning Controllers for Autonomous Surface Vessels}
+\author{Haakon Robinson}
+\date{November 2018}
+
+\begin{document}
+\maketitle
+
+% \pagenumbering{roman}
+
+\frontmatter
+\begin{abstract}
+  \input{abstract}
+\end{abstract}
+
+
+\pagebreak
+\tableofcontents
+\pagebreak
+
+%\pagenumbering{arabic}
+%\setcounter{page}{1}
+
+\mainmatter
+\section{Introduction}
+\label{sec:intro}
+Study the possibilities of applying reinforcement learning to controls
+problems involving marine surface vessels.
+
+
+
+\section{Background}
+\label{sec:bg}
+
+\subsection{Modeling Marine Surface Vessels}
+\label{sec:bg-marine}
+% The 6 DOF model
+% The 3 DOF model
+% Some control laws
+
+\subsection{Deep Learning and Decision Making}
+\label{sec:bg-ml}
+% Good old fashioned AI (symbolic artificial intelligence)
+% Neural network
+% Deep neural network
+
+\subsection{Reinforcement Learning}
+\label{sec:bg-rl}
+% Markov Decision processes
+% Bellman equation
+% Q learning
+% Deep learning
+\input{background/reinforcement-learning}
+
+
 
 \section{Literature Review}
-\input{literature-review/reinforcement-learning/reinforcement-learning}
+\label{sec:lit}
+
+\subsection{Deep Reinforcement Learning}
+\label{sec:lit-dl}
+(Human level control through deep reinforcement learning)
+
+\subsection{Set-Based Tasks for Controls}
+\label{sec:lit-set-tasks}
+Framework for implementing several modes of operation based on the
+current active tasks. Allows for the use of several different control
+systems at once, each one specialising in different combinations of
+tasks. This is a good way to combine the strengths of rule-based and
+ML-based controllers.
+
+
 
 \section{Problem Formulation}
-
+\label{sec:formulation}
 In a navigation problem, one generally has a destination that you wish
-to get your system to. If the environement is deterministic, using
+to get your system to. If the environment is deterministic, using
 some kind of path planning method like A* works well, as long as the
-``obstacles'' are known. When the environement is dynamic and unknown,
+``obstacles'' are known. When the environment is dynamic and unknown,
 this is not as easy. The ``global'' path may still be there, but there
 might be many small local obstacles that need to be avoided. A local
 avoidance system is therefore needed.
 
-Potential fields might lead to oscillatory behaviour.
+Potential fields might lead to oscillatory behavior.
 
 Dynamic window assume no sideways velocity, which is difficult in the
 context of ocean currents. Also computationally heavy, but works well
 with COLREGS.
 
-\section{Questions}
-\subsection{What is a Serret Frenet Frame?}
-Signes master
-
-\subsection{What is set-based control?}
-Signes PhD says:
 
 
-Signes
-\subsection{how can you show that set-based control laws will always be followed?}
+\section{Simulation and Testing Environment}
+\label{sec:sim+test}
 
 
 
+\section{Deep Learning Models}
+\label{sec:learning-models}
 
-The project has the following steps:
-\begin{enumerate}
-\item Perform a literature review on the topic of marine surface
-  vessel modeling and control, as well as deep learning techniques
-  used in tandem with control problems.
-\item Set up a simulation environment for the surface vessel,
-  incorporating difference levels of disturbances.
-\item Set up a baseline using the established control algorithms
-\item Apply reinforcement learning to the system and figure out how to
-  train the system effectively.
-\item Analyse the performance of the machine learning controllers,
-  compare the computation time (the expensiveness) between the two
-  algorithms, and explore the stability consequences of using machine
-  learning techniques in control.  machine learning
-\end{enumerate}
 
+
+\section{Training, Testing, and Validation}
+
+\label{sec:training}
+
+
+\section{Thoughts}
+\input{main-thoughts}
 
 
 \end{document}

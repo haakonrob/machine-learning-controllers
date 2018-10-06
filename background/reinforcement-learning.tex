@@ -1,4 +1,3 @@
-\subsection{Reinforcement Learning}
 \subsubsection{Definitions}
 Agent
 Environment
@@ -6,7 +5,29 @@ State
 Action
 Reward
 
+\subsubsection{Markov Processes}
+A Markov Process is a model that describes the possibly states of the
+environment, and the probability of transitioning from one state to
+another. The state is typically a vector of numbers. The transitions
+are stochastic, such that at every time step there is a probability of
+transitioning to another state. The transition can also map a state
+onto itself.
+
+The state must satisfy the \textbf{Markov Property}, also known as the
+memoryless property. This means that the information contained in the
+state must be independent of past states. In other words, the state
+must ``summarise'' the situation, telling you everything you need to
+know.
+
+\textbf{The discrete case?}
+\textbf{Continuous case?}
+
+
+
 \subsubsection{Markov Decision Processes}
+A Markov Decision Process (or MDP) is a mathematical tool that can be
+used to model decision making. It extends the notion of Markov Chains
+by adding the notions of choice and reward.
 
 \subsubsection{The Bellman Equation}
 Equation that represents the value of being in a particular state,
@@ -25,12 +46,10 @@ function. This can be interpreted as ``action quality''.
 Instead of using a table to store the policy, the policy is ``stored''
 in a neural network. This has consequences for stability.
 
-\subsubsection{Types of reinforcment learning}
-\label{sec:learning-types}
 
 
 
 %%% Local Variables:
 %%% mode: latex
-%%% TeX-master: "../../main"
+%%% TeX-master: "../main"
 %%% End:
